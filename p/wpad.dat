@@ -1,5 +1,9 @@
 function FindProxyForURL(url, hostcs) {
     var host = hostcs.toLowerCase();
     
-    return "SOCKS localhost:8089";
+    if (shExpMatch(host, 'prometheus*.k*f.com')
+        || shExpMatch(host, 'portainer*.k*f.com')
+    ) { return "SOCKS localhost:8088;DIRECT"; }
+        
+    return "DIRECT";
 }
