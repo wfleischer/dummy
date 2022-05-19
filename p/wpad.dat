@@ -1,0 +1,5 @@
+function FindProxyForURL(url, hostcs) {
+    var host = hostcs.toLowerCase();
+    
+    return "SOCKS localhost:8089";
+}
