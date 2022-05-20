@@ -1,9 +1,11 @@
 function FindProxyForURL(url, hostcs) {
     var host = hostcs.toLowerCase();
     
-    if (shExpMatch(host, 'prometheus*.k*f.com')
-        || shExpMatch(host, 'prometheus*.s*k.org')
-        || shExpMatch(host, 'portainer*.k*f.com')
+    if (shExpMatch(host, 'port*.k*f.com')
+        || shExpMatch(host, 'prom*.k*f.com')
+        || shExpMatch(host, 'prom*.s*k.org')
+        || shExpMatch(host, 'stat*.k*f.com')
+        || shExpMatch(host, 'stat*.s*k.org')
     ) { return "SOCKS localhost:8088;DIRECT"; }
         
     return "DIRECT";
