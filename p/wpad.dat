@@ -6,7 +6,7 @@ function FindProxyForURL(url, hostcs) {
         || shExpMatch(host, 'prom*.s*k.org')
         || shExpMatch(host, 'stat*.k*f.com')
         || shExpMatch(host, 'stat*.s*k.org')
-    ) { return "SOCKS localhost:8088;DIRECT"; }
+    ) { return "SOCKS localhost:8088"; }
         
     return "DIRECT";
 }
